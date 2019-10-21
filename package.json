@@ -1,0 +1,39 @@
+{
+  "name": "cypress-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "lint": "eslint **/*.ts",
+    "lint:fix": "eslint --fix **/*.ts"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts}": "eslint --fix"
+  },
+  "keywords": [],
+  "author": "Sarit Vakrat",
+  "license": "ISC",
+  "dependencies": {
+    "@cypress/webpack-preprocessor": "^4.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "cypress": "^3.4.1",
+    "cypress-wait-until": "^1.4.1",
+    "eslint": "^5.16.0",
+    "ts-loader": "^6.2.0",
+    "typescript": "^3.6.3",
+    "webpack": "^4.41.0"
+  },
+  "types": "./global.d",
+  "devDependencies": {
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5"
+  }
+}
