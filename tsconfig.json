@@ -12,5 +12,8 @@
     "jsx": "react",
     "experimentalDecorators": true
   },
-  "compileOnSave": false
+  "compileOnSave": false,
+  "files": [
+    "types/cypress-image-snapshot/index.d.ts"
+  ]
 }

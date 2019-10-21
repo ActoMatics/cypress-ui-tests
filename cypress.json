@@ -1,5 +1,6 @@
 {
   "projectId": "ud1ez3",
-  "watchForFileChanges": false
+  "watchForFileChanges": false,
+  "ignoreTestFiles": ["**/__snapshots__/*", "**/__image_snapshots__/*"],
+  "video": false
 }
-

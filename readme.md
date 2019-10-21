@@ -74,6 +74,7 @@ describe('Todo Actions' , () => {
 })
 ```
 If you wish to run a single test add .only == it.only('bla, ()=>{})
+Or from CLI: npx run cypress run --spec cypress/integration/nameOfSuite.spec.ts 
 
 # Stubbing UI tests
 
@@ -83,10 +84,12 @@ To run it non interactively we run the command: npx cypress run
 
 
 # Page Objects in Cypress
-They are the standard way of coping with large test suites, because, first of all, they enable us to write the tests using objects that are relevant to the application; and limit the use of selectors and other page-specific code, which makes the test code incomprehensible.
+They are the standard way of coping with large test suites, since, firstly, they enable us to write the tests using objects that are relevant to the application; and limit the use of selectors and other page-specific code, which makes the test code more robust and easier to maintain.
 
 Page objects also enable some level of flexibility when the structure of a page changes and we need to change our code to accommodate that.
 
 We are using BasePage class, it will contain all of the service in order to preserve DRY principle. All test pages should implement this class.
 
 # Visual validation
+Typically such plugins take an image snapshot of the entire application under test or a specific element, and then compare the image to a previously approved baseline image. If the images are the same (within a set pixel tolerance), it is determined that the web application looks the same to the user. If there are differences, then there has been some change to the DOM layout, fonts, colors or other visual properties that needs to be investigated.
+At the moment there is a bug when running all tests with cypress visual validation plugin - a workaround can be found here - https://github.com/meinaart/cypress-plugin-snapshots/issues/10
